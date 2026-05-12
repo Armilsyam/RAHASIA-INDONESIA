@@ -3,22 +3,6 @@ import pandas as pd
 import numpy as np
 import time
 
-import requests
-from bs4 import BeautifulSoup
-
-def crawl_real_data():
-    url = "https://nemesis.assai.id/"
-    # CATATAN: Pastikan website mengizinkan scraping (cek robots.txt)
-    response = requests.get(url)
-    
-    if response.status_code == 200:
-        soup = BeautifulSoup(response.content, 'html.parser')
-        # ... Logika untuk mencari elemen HTML (misal <h2>, <a>, dll) ...
-        # ... Ekstrak teksnya dan masukkan ke dalam list/DataFrame ...
-        return data_yang_sudah_diekstrak
-    else:
-        return error_message
-
 st.set_page_config(
     page_title="Rahasia Indonesia Dashboard",
     page_icon="🕸️",
